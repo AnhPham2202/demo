@@ -1,0 +1,267 @@
+header nav ul{
+    border-bottom: 1px solid #ffffff4f;
+}
+header{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    /* position là set theo thằng cha transform là theo chính bản thân của nó */
+    top: 10%;
+}
+header nav ul li.active a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(to right,#fbbd61,#ec7532)
+}
+header nav ul li{
+    position: relative;
+    padding: 0 20px;
+}
+header nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+    transition: all 0.5s;
+    box-shadow: 0 0 20px 0 #fbbd61;
+}
+header nav ul li:hover a::after{
+    width: 100%;
+}
+/* CAROUSEL */
+.carousel-inner .carousel-item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    padding-top: 250px;
+}
+.carousel__text{
+    color: white;
+}
+.carousel-item h3{
+    color:  #ec7532;
+    font-size: 1rem;
+}
+.carousel-item p{
+    font-size: 1rem;
+}
+.carousel-inner .item__1{
+    background-image: url("./../img/hero-1.jpg");
+}
+.carousel-inner .item__2{
+    background-image: url("./../img/hero-2.jpg");
+}
+.carousel-inner .item__3{
+    background-image: url("./../img/hero-3.jpg");
+}
+.carousel-indicators li{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+}
+.carousel-indicators li.active{
+    background: white;
+}
+.carousel-indicators{
+    justify-content: flex-start;
+    /* ??? */
+}
+.btn-trailer{
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    /* overflow hidden là cắt hết phần dư của thằng con */
+}
+.btn-trailer::after{
+    content: "";
+    display: block;
+    background: tomato;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -15%;
+    transform: skewX(30deg);
+    /* làm thành hình bình hành góc nghiêng 30 */
+    transition: all 0.5s;
+}
+.btn-trailer:hover::after{
+    width: 120%;
+}
+.btn-trailer i, span{
+    position: relative;
+    z-index: 2;
+    /* 2 thằng phải đi chung  */
+}
+.age__limit{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    border: 2px solid white;
+    margin-right: 20px;
+}
+/* NEW IN */
+#newin{
+    margin-top: 50px;
+}
+.tittle__heading{
+    color: #ec7532;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+    padding-bottom: 20px;
+    position: relative;
+}
+.tittle__heading::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 10%;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    position: absolute;
+    bottom: -1px;
+}
+.newin__content{
+    margin: 40px 0;
+}
+.newin__item{
+    text-align: center;
+    font-size: 10px;
+}
+.newin__item h1{
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.animation {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#newin .animation{
+    position: relative;
+}
+#newin .animation::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to right, #fbbd61c9,#ec7532c9);
+    position: absolute;
+    left: -200px;
+    bottom: 0;
+    transition: all 1s;
+    transform: skew(50deg);
+}
+#newin .animation:hover::before{
+    width: 300%;
+    height: 100%;
+}
+#newin .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    padding: 50% 0;
+    color: white;
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#newin .overlay i{
+    width: 70px;
+    height: 70px;
+    border: 1px solid white;
+    line-height: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+#newin .animation:hover .overlay{
+    opacity: 1;
+}
+
+.slick-prev:before, .slick-next:before{
+    color: red;
+}
+/* TIME */
+.nav-item{
+    position: relative;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+.nav__time:after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(to right, #fbbd61c9,#ec7532c9);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: all 0.5s;
+}
+.nav__time:hover:after{
+    width: 100%;
+}
+.nav__time.active{
+    color: #ec7532c9;
+    transition: all 0.15s;
+}
+.nav-pills .nav__time.active::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #fbbd61c9,#ec7532c9);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+}
+.nav{
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+}
+.nav-item a{
+    color: black;
+}
+.nav-item a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* COMING SOON */
+#coming__soon{
+    margin-top: 5rem;
+    background-color: black;
+    height: 500px;
+    padding-top: 5rem;
+    color: white;
+    position: relative;
+}.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
